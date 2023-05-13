@@ -3,4 +3,14 @@
 
 {% import '_includes/forms.twig' as forms %}
 
-{# ... #}
+{{ forms.autosuggestField({
+    label:          "OpenAI API Key"|t('ai-companion'),
+    instructions:   "Your OpenAI API Key (get one here: https://platform.openai.com/account/api-keys)"|t('ai-companion'),
+    id:             'openAiApiKey',
+    name:           'openAiApiKey',
+    disabled:       'openAiApiKey' in overrides,
+    tip:            'openAiApiKey' in overrides ? "This setting is overridden in a config file and cannot be changed."|t('ai-companion') : null,
+    value:          settings.openAiApiKey,
+    errors:         settings.getErrors('openAiApiKey'),
+    suggestEnvVars: true,
+}) }}

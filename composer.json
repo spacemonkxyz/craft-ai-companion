@@ -19,8 +19,8 @@
         }
     },
     "extra": {
-        "handle": "craft-ai-companion",
-        "name": "craft-ai-companion",
+        "handle": "ai-companion",
+        "name": "AI Companion",
         "developer": "spacemonk",
         "documentationUrl": "",
         "class": "spacemonk\\ai_companion\\AiCompanion"
